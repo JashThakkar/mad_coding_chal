@@ -71,7 +71,7 @@ class PageOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Image(
-        image: AssetImage('assets/zombie.png'),
+        image: AssetImage('assets/zombies.jpeg'),
         width: 200,
         height: 200,
         fit: BoxFit.cover,
@@ -87,7 +87,7 @@ class PageTwo extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Image(
-        image: AssetImage('assets/sc.png'),
+        image: AssetImage('assets/sc.jpeg'),
         width: 200,
         height: 200,
         fit: BoxFit.cover,
@@ -103,7 +103,7 @@ class PageThree extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Image(
-        image: AssetImage('assets/ww.png'),
+        image: AssetImage('assets/ww.jpg'),
         width: 200,
         height: 200,
         fit: BoxFit.cover,
