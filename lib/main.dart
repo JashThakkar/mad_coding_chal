@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,9 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Bottom Nav Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePage(),
     );
   }
@@ -80,11 +79,28 @@ class PageOne extends StatelessWidget {
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
 
+  Future<void> _skeletonBones() async {
+    //add skeleton sound
+    final player = AudioPlayer();
+    await player.play(AssetSource('skeleton.mp3'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
+<<<<<<< HEAD
       child: Image.asset(
         'assets/sc.jpeg',
+=======
+      child: GestureDetector(
+        onTap: _skeletonBones,
+        child: Image.asset(
+          'assets/sc.jpeg',
+          width: 200,
+          height: 200,
+          fit: BoxFit.cover,
+        ),
+>>>>>>> f11faa3 (added skeleton sounds)
       ),
     );
   }
@@ -92,7 +108,6 @@ class PageTwo extends StatelessWidget {
 
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Center(
