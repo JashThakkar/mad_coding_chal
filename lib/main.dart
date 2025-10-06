@@ -49,16 +49,16 @@ class _HomePageState extends State<HomePage> {
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.adb_rounded),
+            label: 'Zombies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.arrow_back),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.account_circle),
+            label: 'Werewolf',
           ),
         ],
       ),
@@ -71,7 +71,7 @@ class PageOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Home Page', style: TextStyle(fontSize: 24)),
+      child: Text('Zombies', style: TextStyle(fontSize: 24)),
     );
   }
 }
@@ -81,7 +81,7 @@ class PageTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Search Page', style: TextStyle(fontSize: 24)),
+      child: Text('Sceletons', style: TextStyle(fontSize: 24)),
     );
   }
 }
@@ -91,7 +91,7 @@ class PageThree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Settings Page', style: TextStyle(fontSize: 24)),
+      child: Text('WereWolfs', style: TextStyle(fontSize: 24)),
     );
   }
 }
