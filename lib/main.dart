@@ -40,8 +40,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -53,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.arrow_back),
-            label: 'Sceleton',
+            label: 'Skeleton',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
@@ -67,30 +66,38 @@ class _HomePageState extends State<HomePage> {
 
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Zombies', style: TextStyle(fontSize: 24)),
+    return Center(
+      child: Image.network(
+        'https://i.pinimg.com/736x/e9/11/03/e91103ff4320df571f29a175b3dda5a4.jpg', 
+        width: 200,
+        height: 200,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
 
 class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('Sceletons', style: TextStyle(fontSize: 24)),
+      child: Text('Skeletons', style: TextStyle(fontSize: 24)),
     );
   }
 }
 
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text('WereWolfs', style: TextStyle(fontSize: 24)),
+      child: Text('Werewolves', style: TextStyle(fontSize: 24)),
     );
   }
 }
