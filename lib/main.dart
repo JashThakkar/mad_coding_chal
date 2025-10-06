@@ -85,8 +85,13 @@ class PageTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Skeletons', style: TextStyle(fontSize: 24)),
+    return Center(
+      child: Image.network(
+        'https://i.etsystatic.com/22323254/c/2000/1589/0/119/il/49882e/3937889906/il_340x270.3937889906_qeg5.jpg', 
+        width: 200,
+        height: 200,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
@@ -96,8 +101,14 @@ class PageThree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Werewolves', style: TextStyle(fontSize: 24)),
+    return Center(
+      child: Image.network(
+"https://images.squarespace-cdn.com/content/v1/58f5872b3a0411b4871864ea/1534524826497-ZLJCFKD7711GQ03WL89C/MJThrillerPrint_edited-12.jpg?format=1500w",
+        width: 200,
+        height: 200,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
+
