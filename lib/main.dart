@@ -72,9 +72,6 @@ class PageOne extends StatelessWidget {
     return Center(
       child: Image.asset(
         'assets/zombies.jpeg',
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
       ),
     );
   }
@@ -88,9 +85,6 @@ class PageTwo extends StatelessWidget {
     return Center(
       child: Image.asset(
         'assets/sc.jpeg',
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
       ),
     );
   }
@@ -104,9 +98,6 @@ class PageThree extends StatelessWidget {
     return Center(
       child: Image.asset(
         'assets/ww.jpg',
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
       ),
     );
   }
