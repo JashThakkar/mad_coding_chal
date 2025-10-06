@@ -9,9 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Bottom Nav Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePage(),
     );
   }
@@ -71,7 +69,7 @@ class PageOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Image.network(
-        'https://i.pinimg.com/736x/e9/11/03/e91103ff4320df571f29a175b3dda5a4.jpg', 
+        'https://i.pinimg.com/736x/e9/11/03/e91103ff4320df571f29a175b3dda5a4.jpg',
         width: 200,
         height: 200,
         fit: BoxFit.cover,
@@ -96,8 +94,25 @@ class PageThree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Werewolves', style: TextStyle(fontSize: 24)),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // 🐺 the werewolf image
+          Image.asset(
+            'assets/images/werewolf.png', // make sure this path matches your file
+            width: 200,
+            height: 200,
+            fit: BoxFit.contain,
+          ),
+          const SizedBox(height: 20), // space between image and text
+          // title text
+          const Text(
+            'Werewolves',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 }
