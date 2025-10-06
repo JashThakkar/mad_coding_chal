@@ -66,11 +66,23 @@ class _HomePageState extends State<HomePage> {
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
 
+  //add zombie sound
+  Future<void> _zombieSound() async {
+    final player = AudioPlayer();
+    await player.play(AssetSource('zombie.mp3'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset(
-        'assets/zombies.jpeg',
+      child: GestureDetector(
+        onTap: _zombieSound,
+        child: Image.asset(
+          'assets/zombies.jpeg',
+          width: 200,
+          height: 200,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
@@ -88,10 +100,6 @@ class PageTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-<<<<<<< HEAD
-      child: Image.asset(
-        'assets/sc.jpeg',
-=======
       child: GestureDetector(
         onTap: _skeletonBones,
         child: Image.asset(
@@ -100,7 +108,6 @@ class PageTwo extends StatelessWidget {
           height: 200,
           fit: BoxFit.cover,
         ),
->>>>>>> f11faa3 (added skeleton sounds)
       ),
     );
   }
@@ -113,6 +120,9 @@ class PageThree extends StatelessWidget {
     return Center(
       child: Image.asset(
         'assets/ww.jpg',
+        width: 200,
+        height: 200,
+        fit: BoxFit.cover,
       ),
     );
   }
