@@ -41,7 +41,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Nav Example'),
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -54,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.arrow_back),
-            label: 'Search',
+            label: 'Sceleton',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
