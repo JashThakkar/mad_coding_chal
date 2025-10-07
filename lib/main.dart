@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'dart:math' as math;
 
 void main() {
   runApp(MyApp());
@@ -115,14 +116,23 @@ class PageTwo extends StatelessWidget {
 
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
+  Future<void> _werewolfHowl() async {
+    //add werewolf sound
+    final player = AudioPlayer();
+    await player.play(AssetSource('ww.mp3'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset(
-        'assets/ww.jpg',
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
+      child: GestureDetector(
+        onTap: _werewolfHowl,
+        child: Image.asset(
+          'assets/ww.jpeg',
+          width: 200,
+          height: 200,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
