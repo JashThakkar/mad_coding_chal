@@ -128,7 +128,7 @@ class PageThree extends StatelessWidget {
       child: GestureDetector(
         onTap: _werewolfHowl,
         child: Image.asset(
-          'assets/ww.jpeg',
+          'assets/ww.jpg',
           width: 200,
           height: 200,
           fit: BoxFit.cover,
