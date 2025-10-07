@@ -67,7 +67,6 @@ class _HomePageState extends State<HomePage> {
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
 
-  //add zombie sound
   Future<void> _zombieSound() async {
     final player = AudioPlayer();
     await player.play(AssetSource('zombie.mp3'));
@@ -93,7 +92,6 @@ class PageTwo extends StatelessWidget {
   const PageTwo({super.key});
 
   Future<void> _skeletonBones() async {
-    //add skeleton sound
     final player = AudioPlayer();
     await player.play(AssetSource('skeleton.mp3'));
   }
@@ -117,7 +115,6 @@ class PageTwo extends StatelessWidget {
 class PageThree extends StatelessWidget {
   const PageThree({super.key});
   Future<void> _werewolfHowl() async {
-    //add werewolf sound
     final player = AudioPlayer();
     await player.play(AssetSource('ww.mp3'));
   }
